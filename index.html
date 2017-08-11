@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Week 4 Game</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<script src="javascript/game.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- header -->
+<div class="container">
+	<div class="row">
+	<div class="col-lg-4">
+	<h1>CrystalsCollector!</h1>
+	</div>
+	</div>
+	<!-- rules -->
+	<div class="row">
+	<div class="col-lg-6">
+	<p>You will be given a random number at the start of the game.
+	<br>
+
+	There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. 
+	<br>
+
+	You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.
+	<br>
+
+	The value of each crystal is hidden from you until you click on it.
+	<br>
+
+	Each time when the game starts, the game will change the values of each crystal.
+	</p>
+	</div>
+	</div>
+<!-- current number and win/loss -->
+	<div class="row">
+	<h3 id="target">Number to Match</h3>
+	<p>win</p>
+	<p>loss</p>
+	</div>
+
+<!-- 4 gem buttons with random numbers attached -->
+<div class="row">
+	<!-- <div class="col-lg-3"> -->
+		<button id="red">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuhCDVQhODOLfa6TjFrG-3eMhUrZbzXm9cM4JwfIK8UOe69dL3wg" height="100" width="100"></button>
+		<button id="yellow">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS89cI68MQbK0m7ez-y5PYaLYD9bGeumfp59nH0NHYzA8a_QR2Dbg" height="100" width="100">
+		</button>
+		<button id="green" >
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmR_E2cK-BxUXQoNNju5L8EZrLCgnPSslR81Z89hlywYniKTAp"  height="100" width="100">
+		</button>
+		<button id="blue">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQEoMi4O6xDdvNiwpJPRtJrvSsCDJxh9Ld4w3mwCizpT3Wd5uE" height="100" width="100">
+		</button>
+	<!-- </div> -->	
+</div>
+
+<!-- your score is  h2 -->
+<div class="row">
+<h3>Your score is</h3>
+</div>
+<!-- total score box -->
+</div>	
+
+
+</body>
+</html>
