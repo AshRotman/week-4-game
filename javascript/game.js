@@ -1,18 +1,19 @@
-// $(document).ready(function() {
+
+
+$(function() {
 
 //global variables
 var wins = 0;
 var losses = 0;
 var math = 0;
+var blue = 0;
+var red = 0,
+var yellow = 0;
+var green = 0;
 
 /**Random Number**/
 var number = Math.floor((Math.random()* 100) + 19);
 
-/**Random Crystal number**/
-var blue = Math.floor((Math.random()* 12) + 1);
-var red = Math.floor((Math.random()* 12) + 1);
-var yellow = Math.floor((Math.random()* 12) + 1);
-var green = Math.floor((Math.random()* 12) + 1);
 
 var configmath = function(){
 	$('#wins').empty();
@@ -22,6 +23,12 @@ var configmath = function(){
 	$('.math').empty();
 	$('.math').append(math);
 	
+}
+
+/**Random Crystal number**/
+var randomGemNumber = function(){
+	$(blue) = Math.floor(Math.random()*12) +1,
+	blue();
 }
 
 var reset = function(){
@@ -56,9 +63,10 @@ var config = function (){
 }
 
 
-	$('#blue').click(function(){
+	$('#blue').click(function() {
 		math = math + red;
 		config();
+		console.log(math);
 	});
 
 	$('#red').click(function(){
@@ -72,8 +80,9 @@ var config = function (){
 	$('#green').click(function(){
 		math  = math  + green;
 		config();
-	}
+	});
 });
+
 
 
 	
