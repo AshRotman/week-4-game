@@ -32,6 +32,15 @@ var randomGemNumber = function(){
 
 }
 
+function randomGemNumber () {
+	return Math.floor(Math.random()*12 +1);
+}
+	var blueValue = randomGemNumber();
+	var redValue = randomGemNumber();
+	var yellowValue = randomGemNumber();
+	var greenValue = randomGemNumber();
+
+
 var reset = function(){
 	math = 0;
     number = Math.floor((Math.random()* 100) + 19);
@@ -39,20 +48,22 @@ var reset = function(){
 	$('#target').empty();
 	$('#target').append(number);
 
-	blue = Math.floor((Math.random()* 12) + 1);
-    red = Math.floor((Math.random()* 12) + 1);
-    yellow = Math.floor((Math.random()* 12) + 1);
-    green = Math.floor((Math.random()* 12) + 1);
+	blueValue = Math.floor((Math.random()* 12) + 1);
+    redValue = Math.floor((Math.random()* 12) + 1);
+    yellowValue = Math.floor((Math.random()* 12) + 1);
+    greenValue = Math.floor((Math.random()* 12) + 1);
     configmath();
 }
 
 var config = function (){
 	if (math == number) {
 		wins = wins + 1;
+		alert('You Win!')
 		reset();
 }
 	else if(math > number){
 		losses = losses + 1;
+		alert('You Lost!')
 		reset();
 }
 	else{
@@ -65,21 +76,21 @@ var config = function (){
 
 
 	$('#blue').click(function() {
-		math = math + randomGemNumber();
+		math = math + blueValue;
 		config();
-		console.log(math);
+		// console.log(math);
 	});
 
 	$('#red').click(function(){
-		math  = math  + red;
+		math  = math  + redValue;
 		config();
 	});
 	$('#yellow').click(function(){
-		math  = math  + yellow;
+		math  = math  + yellowValue;
 		config();
 	});
 	$('#green').click(function(){
-		math  = math  + green;
+		math  = math  + greenValue;
 		config();
 	});
 });
